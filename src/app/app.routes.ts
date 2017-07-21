@@ -4,5 +4,5 @@ import { ReposComponent } from './repos/repos.component';
 
 export const appRoutes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'repo/:user', component: ReposComponent },
+    { path: 'repos/:user', component: ReposComponent },
 ];

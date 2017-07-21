@@ -22,7 +22,6 @@ export class HomeComponent {
 
         this.http.get(`https://api.github.com/search/users?q=${searchTerm}`)
             .subscribe(data => {
-                console.log(data);
                 this.users = data['items'];
             });
     }

@@ -1,1 +1,11 @@
-<h3>Repos of the user</h3>
+<div id="repos" class="container">
+    <p *ngIf="repos && repos.length > 0">Click to view on GitHub</p>
+
+    <div *ngIf="repos && repos.length > 0" class="list-group">
+        <a *ngFor="let repo of repos" href="{{repo.html_url}}" target="_blank" class="list-group-item">{{repo.full_name}}</a>
+    </div>
+
+    <h3 *ngIf="!repos || repos.length === 0">Searching...</h3>
+
+    <h3 *ngIf="searched && repos.length === 0">No repos found!</h3>
+</div>

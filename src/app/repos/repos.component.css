@@ -1,0 +1,7 @@
+#repos {
+    margin-top: 20px;
+}
+
+#repos .list-group-item {
+    width: 100%;
+}
