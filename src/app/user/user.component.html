@@ -3,29 +3,13 @@
         <img class="col-sm-3 col-md-3 col-lg-3" src="{{user.avatar_url}}" alt="{{user.name}}">
 
         <div class="info col-sm-9 col-md-9 col-lg-9">
-            <h3>{{user.name}}</h3>
+            <h3>{{user.name || user.login}}</h3>
 
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Public Repos</th>
-                    <th>Public Gists</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr>
-                    <td>{{user.type}}</td>
-                    <td>{{user.public_repos}}</td>
-                    <td>{{user.public_gists}}</td>
-                </tr>
-                </tbody>
-            </table>
+            <p>{{user.type}}</p>
 
             <div class="actions">
                 <button class="btn btn-primary">List Repos</button>
-                <button class="btn btn-primary">Github</button>
+                <a target="_blank" href="{{user.html_url}}" class="btn btn-primary">Github</a>
             </div>
         </div>
     </div>

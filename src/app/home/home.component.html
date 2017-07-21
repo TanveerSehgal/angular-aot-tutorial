@@ -4,16 +4,18 @@
 
         <p>Search for any user on GitHub</p>
 
-        <p class="input-group">
-            <input class="form-control" placeholder="Search for...">
+        <form (submit)="$event.preventDefault(); searchUsers(search.value)">
+            <p class="input-group">
+                <input #search class="form-control" placeholder="Search for...">
 
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-            </span>
-        </p>
+                <span class="input-group-btn">
+                    <button class="btn btn-default">Go!</button>
+                </span>
+            </p>
+        </form>
     </div>
 </div>
 
 <div class="container">
-    <app-user></app-user>
+    <app-user *ngFor="let user of users" [user]="user"></app-user>
 </div>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { appRoutes } from './app.routes';
 import { HomeComponent } from './home/home.component';
@@ -19,6 +20,7 @@ import { ReposComponent } from './repos/repos.component';
   imports: [
       RouterModule.forRoot(appRoutes),
       BrowserModule,
+      HttpClientModule,
   ],
   providers: [],
   bootstrap: [
