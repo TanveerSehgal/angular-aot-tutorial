@@ -43,3 +43,6 @@ Thumbs.db
 
 # Article
 article/
+
+# Build
+aot/

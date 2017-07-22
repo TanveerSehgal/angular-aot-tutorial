@@ -4,8 +4,8 @@ import { User } from '../models/user.model';
 
 @Component({
     selector: 'app-home',
-    templateUrl: 'home.component.html',
-    styleUrls: ['home.component.css'],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
     users: User[] = [];
@@ -14,7 +14,7 @@ export class HomeComponent {
         private http: HttpClient
     ) { }
 
-    searchUsers(searchTerm) {
+    searchUsers(searchTerm: String) {
         if (!searchTerm) {
             this.users = [];
             return;

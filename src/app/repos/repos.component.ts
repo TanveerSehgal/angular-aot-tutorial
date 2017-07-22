@@ -24,7 +24,7 @@ export class ReposComponent implements OnInit {
         });
     }
 
-    getRepos(user) {
+    getRepos(user: String) {
         this.http.get(`https://api.github.com/users/${user}/repos`)
             .subscribe(data => {
                 this.repos = data;
